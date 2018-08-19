@@ -1,0 +1,48 @@
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <div class="wrapper">
+    <div class="main-sound-block" style="background-image:url('/covers/{{sound.cover}}');">
+    </div>
+    <div  class="visualize">
+      <canvas id="canvas"  width="700" heigth="500"></canvas>
+      <div class="sound-messages">
+        {{#each sound.messages}}
+          <div class="hidden" data-time="{{this.time}}">
+            <div class="sound-message-avatar js-show-message" style="background-image:url(/users/{{this.user}})"></div>
+            <div class="hidden js-sound-message">
+                {{this.message}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    <div class="sound-cover">
+      <img src="/covers/{{sound.cover}}" class="img-thumbnail" alt="{{sound.name}}">
+    </div>
+    <div class="sound-controlls">
+      <div id="play">
+        <i class="fas fa-play"></i>
+      </div>
+      <div id="pause" class="hidden">
+        <i class="fas fa-pause"></i>
+      </div>
+    </div>
+    <div class="sound-title">
+          {{sound.name}}
+    </div>
+    <div id="time" class="sound-time js-time">00:00</div>
+  </div>
+
+
+  <audio src="/audio/{{sound.audio}}" id="audio"></audio>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/js/Sound.js"></script>
+  <script type="text/javascript">
+  	window.onload = function() {
+      let audio = $('audio');
+      let sound = new Sound();
+      sound.loadAudio(audio.attr('src'));
+    };
+
+  </script>

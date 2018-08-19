@@ -1,0 +1,70 @@
+.wrapper{
+  position: relative;
+}
+.main-sound-block {
+  width: 100%;
+  height: 400px;
+  filter: blur(20px);
+  background-size: block;
+  background-position: top;
+}
+.visualize{
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+}
+.sound-cover {
+  width: 250px;
+  position: absolute;
+  top: 70px;
+  right: 30px;
+}
+.sound-controlls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.sound-controlls > div{
+  padding: 30px;
+  background: #FF530D;
+  text-align: center;
+  color: #fff;
+}
+.hidden{
+  display: none;
+}
+.sound-title{
+  position: absolute;
+  left: 120px;
+  top: 30px;
+  background: rgba(0,0,0,0.9);
+  font-size: 20px;
+  color: #FF530D;
+  padding: 4px;
+}
+.sound-time {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  background: #000;
+  color: #FF530D;
+  font-size: 12px;
+}
+.sound-messages{
+  position: absolute;
+}
+.sound-messages > div{
+  position: absolute;
+}
+.sound-message-avatar{
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}
+.js-sound-message{
+  width: 100px;
+  background: #000;
+  padding: 10px;
+  color: #FF530D;
+  font-size: 20px;
+}
